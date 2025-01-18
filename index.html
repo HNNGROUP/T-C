@@ -64,6 +64,32 @@
         color: #aaa;
       }
 
+      /* Floating Button */
+      .close-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ff5733;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      /* Animation on hover: Rotate the button */
+      .close-btn:hover {
+        background-color: #ff4028;
+        transform: rotate(360deg); /* Rotate the button */
+      }
+
+      .close-btn:active {
+        transform: rotate(180deg); /* Slightly rotate on active press */
+      }
+
       /* Media query for small devices */
       @media (max-width: 768px) {
         .wrapper {
@@ -123,6 +149,7 @@
         <li>
           <strong>Customer Responsibility:</strong> Provide accurate address and other details.
         </li>
+        <li><strong>Refunds:</strong> Processed to original payment method.</li>
         <li><strong>Privacy:</strong> Data used only for order processing.</li>
         <li>
           <strong>Refusal After Ordering:</strong> If a customer places an order for a book set and later refuses to accept it, a penalty of ₹500 will be charged. Additionally, the customer will not be able to place any future orders.
@@ -134,5 +161,8 @@
     <footer>
       &copy; 2025 HNN GROUP | All Rights Reserved
     </footer>
+
+    <!-- Floating Close Button -->
+    <button class="close-btn" onclick="window.close()">X</button>
   </body>
 </html>
